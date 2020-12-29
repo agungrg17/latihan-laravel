@@ -42,6 +42,11 @@
                         <li>
                             <a href="{{ url('/siswa') }}" class="nav-link">Profil Siswa</a>
                         </li>
+                        <li>
+                            @can('isAdmin')
+                            <a href="{{ url('/user') }}" class="nav-link">Manajemen User</a>
+                            @endcan
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

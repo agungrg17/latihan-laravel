@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +21,10 @@ Route::resource('siswa', SiswaController::class)
 ->middleware('can:isAdmin');
 Route::resource('siswa', SiswaController::class)
 ->only('show')->middleware('can:isAdminSiswa');
+Route::resource('user', UserController::class)
+->middleware('can:isAdmin');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
