@@ -15,6 +15,7 @@
             <p>Selamat Datang Di Portal Informasi Siswa SMA 404</p>
                 <a href="{{ url('info-kegiatan')}}" class="btn btn-dark">Info Kegiatan</a>
                 <a href="{{ url('data-siswa')}}" class="btn btn-dark">Data Siswa</a>
+                <a href="{{ url('siswa')}}" class="btn btn-dark">Profil Siswa</a>
     </div> 
 
 @endsection
