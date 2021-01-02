@@ -14,6 +14,7 @@
                     Nama <input type="text" name="name" required>
                     Role <input type="text" name="role" required>
                     Email <input type="text" name="email" required>
+                    Password <input type="text" name="password" required>
                 </ul>
                 <input type="submit" value="Simpan Data" class="btn btn-success">
             </form>

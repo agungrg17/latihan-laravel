@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Models\User;
 class UserController extends Controller
 {
@@ -38,7 +39,8 @@ class UserController extends Controller
         User::create([
             'name'  => $request->name,
             'role'  => $request->role,
-            'email' => $request->email
+            'email' => $request->email,
+            'password'  => $request->password
         ]);
         return redirect()->route('user.index');
     }
@@ -96,6 +98,6 @@ class UserController extends Controller
         $users = User::find($id);
         $users->delete();
 
-        return redirect()->toute('user.index');
+        return redirect()->route('user.index');
     }
 }
